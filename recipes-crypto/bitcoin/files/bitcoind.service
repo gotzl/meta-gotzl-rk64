@@ -1,0 +1,7 @@
+[Unit]
+Description=Bitcoind service
+RequiresMountsFor=/srv
+
+[Service]
+User=rockpro
+ExecStart=bitcoind -datadir=/srv/bitcoin/ -disablewallet -printtoconsole -dbcache=100
