@@ -9,6 +9,9 @@ Please see the corresponding sections below for details.
 
 This layer depends on:
 
+[meta-virtualization]()
+* branch: zeus
+
 [meta-gotzl](https://github.com/gotzl/meta-gotzl)
 * branch: zeus
 
