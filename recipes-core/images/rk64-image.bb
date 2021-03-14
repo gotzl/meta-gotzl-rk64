@@ -9,11 +9,22 @@ IMAGE_FEATURES += "\
 "
 
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
-	bitcoin nftables dnsmasq python3-fail2ban wpa-supplicant iw git bash sudo e2fsprogs \
+	bitcoin nftables dnsmasq python3-fail2ban wpa-supplicant iw git bash sudo e2fsprogs less procps \
 	docker python3-docker-compose \
 	kernel-module-xt-conntrack \
 	kernel-module-xt-addrtype \
+	kernel-module-xt-multiport \
 	kernel-module-xt-nat \
+	kernel-module-xt-masquerade \
+	kernel-module-xt-ipvs \
+	kernel-module-nfnetlink \
+	kernel-module-nf-conntrack-netlink \
+        kernel-module-br-netfilter \
+	kernel-module-r8712u \
+	kernel-module-b43 \
+        kernel-module-brcmfmac \
+        linux-firmware-rtl8192su \
+	${MACHINE_EXTRA_RRECOMMENDS} \
 "
 
 # docker-compose pulls in specific versions 
@@ -37,8 +48,3 @@ EXTRA_USERS_PARAMS = "\
 	usermod -p '*' rockpro; \
 "
 
-CORE_IMAGE_EXTRA_INSTALL += " \
-	io \
-	linux-firmware-rk-cdndp \
-	${RK_WIFIBT_FIRMWARES} \
-"
