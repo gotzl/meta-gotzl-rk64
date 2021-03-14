@@ -10,10 +10,10 @@ Please see the corresponding sections below for details.
 This layer depends on:
 
 [meta-virtualization]()
-* branch: zeus
+* branch: dunfell
 
 [meta-gotzl](https://github.com/gotzl/meta-gotzl)
-* branch: zeus
+* branch: dunfell
 
 [meta-rockpro64-hacks](https://github.com/gotzl/meta-rockpro64-hacks)
-* branch: zeus
+* branch: dunfell
