@@ -1,0 +1,11 @@
+[parity]
+base-path = "/srv/ethereum/"
+
+[rpc]
+interface = "all"
+apis = ["all"]
+hosts = ["all"]
+
+[footprint]
+# If defined will never use more then 256MB for all caches. (Overrides other cache settings).
+cache_size = 256
