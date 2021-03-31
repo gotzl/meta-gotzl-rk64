@@ -6,4 +6,5 @@ tmpfs                /var/volatile        tmpfs      defaults              0  0
 /dev/nvme0n1         /nvme                ext4       defaults,async,noauto 0  0
 /dev/mmcblk0p1       /media/card          ext4       defaults,sync,noauto  0  0
 /dev/sda2            /srv                 auto       defaults,async,noauto  0  0
+/dev/disk/by-label/vault            /vault                 auto       defaults,async,noauto  0  0
 

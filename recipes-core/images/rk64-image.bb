@@ -8,10 +8,12 @@ IMAGE_FEATURES += "\
 	nfs-server \
 "
 
+RRSYNC_DEPS = "perl-module-socket perl-module-io-socket perl-module-file-glob"
+
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
 	bitcoin openethereum \
-	nftables dnsmasq python3-fail2ban wpa-supplicant iw \
-	git bash sudo e2fsprogs less procps wireguard-tools wireguard-module \
+	nftables dnsmasq python3-fail2ban wpa-supplicant iw wireguard-tools wireguard-module \
+	git bash sudo e2fsprogs less procps iotop iftop rsnapshot cryptsetup lvm2 ${RRSYNC_DEPS} \
 	docker python3-docker-compose \
 	kernel-module-xt-conntrack \
 	kernel-module-xt-addrtype \
