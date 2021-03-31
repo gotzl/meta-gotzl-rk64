@@ -9,7 +9,9 @@ IMAGE_FEATURES += "\
 "
 
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
-	bitcoin openethereum nftables dnsmasq python3-fail2ban wpa-supplicant iw git bash sudo e2fsprogs less procps \
+	bitcoin openethereum \
+	nftables dnsmasq python3-fail2ban wpa-supplicant iw \
+	git bash sudo e2fsprogs less procps wireguard-tools wireguard-module \
 	docker python3-docker-compose \
 	kernel-module-xt-conntrack \
 	kernel-module-xt-addrtype \
@@ -23,6 +25,7 @@ IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
 	kernel-module-r8712u \
 	kernel-module-b43 \
     kernel-module-brcmfmac \
+	kernel-module-wireguard \
     linux-firmware-rtl8192su \
 	${MACHINE_EXTRA_RRECOMMENDS} \
 "
