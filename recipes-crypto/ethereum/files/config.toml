@@ -1,5 +1,5 @@
 [parity]
-base-path = "/srv/ethereum/"
+base_path = "/srv/ethereum/"
 
 [rpc]
 interface = "all"

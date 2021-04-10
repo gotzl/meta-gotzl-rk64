@@ -13,7 +13,7 @@ RRSYNC_DEPS = "perl-module-socket perl-module-io-socket perl-module-file-glob"
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
 	bitcoin openethereum \
 	nftables dnsmasq python3-fail2ban wpa-supplicant iw wireguard-tools wireguard-module \
-	git bash sudo e2fsprogs less procps iotop iftop rsnapshot cryptsetup lvm2 ${RRSYNC_DEPS} \
+	git bash sudo e2fsprogs less procps iotop iftop rsnapshot cronie go-cryptfs cryptsetup lvm2 zram node_exporter ${RRSYNC_DEPS} \
 	docker python3-docker-compose \
 	kernel-module-xt-conntrack \
 	kernel-module-xt-addrtype \
@@ -24,6 +24,7 @@ IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
 	kernel-module-nfnetlink \
 	kernel-module-nf-conntrack-netlink \
     kernel-module-br-netfilter \
+    kernel-module-nfsd \
 	kernel-module-r8712u \
 	kernel-module-b43 \
     kernel-module-brcmfmac \
@@ -49,7 +50,8 @@ inherit core-image extrausers
 
 EXTRA_USERS_PARAMS = "\
 	groupadd wheel; \
-	useradd -m -G wheel,docker rockpro; \
+	groupadd -g 1000 rockpro; \
+	useradd -m -u 1000 -g 1000 -G wheel,docker rockpro; \
 	usermod -p '*' rockpro; \
 "
 
