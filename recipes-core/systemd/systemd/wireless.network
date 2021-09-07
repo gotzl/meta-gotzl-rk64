@@ -1,5 +1,8 @@
 [Match]
 Name=wlan0
 
+[Link]   
+MTUBytes=1492
+
 [Network]
 DHCP=ipv4

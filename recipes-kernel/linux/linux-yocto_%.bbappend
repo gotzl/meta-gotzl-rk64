@@ -4,4 +4,5 @@ SRC_URI += " \
 	file://iotop.cfg \
 	file://dmcrypt.cfg \
 	file://nfs.cfg \
+	file://wireguard.cfg \
 "

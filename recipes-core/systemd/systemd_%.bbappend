@@ -14,7 +14,7 @@ FILES_${PN} += " \
 do_install_append () {
 	if ${@bb.utils.contains('PACKAGECONFIG','networkd','true','false',d)}; then
 		install -d ${D}${sysconfdir}/systemd/network
-		install -m 0755 ${WORKDIR}/wired.network ${D}${sysconfdir}/systemd/network/20-wired.network
-		install -m 0755 ${WORKDIR}/wireless.network ${D}${sysconfdir}/systemd/network/25-wireless.network
+		install -m 0644 ${WORKDIR}/wired.network ${D}${sysconfdir}/systemd/network/20-wired.network
+		install -m 0644 ${WORKDIR}/wireless.network ${D}${sysconfdir}/systemd/network/25-wireless.network
 	fi
 }

@@ -1,7 +1,11 @@
 [Match]
 Name=eth0
 
+[Link]   
+MTUBytes=1492
+
 [Network]
 Address=10.0.0.100/24
+ConfigureWithoutCarrier=yes
 # Gateway=10.0.0.1
 # DNS=10.0.0.1
