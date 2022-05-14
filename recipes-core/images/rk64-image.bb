@@ -13,7 +13,7 @@ RRSYNC_DEPS = "perl-module-socket perl-module-io-socket perl-module-file-glob"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
 	bitcoin lighthouse-bin \
-	nftables dnsmasq python3-fail2ban wpa-supplicant iw wireguard-tools \
+	nftables dnsmasq python3-fail2ban wpa-supplicant iw crda wireguard-tools hdparm sdparm smartmontools \
 	git bash sudo e2fsprogs less procps iotop iftop rsnapshot cronie go-cryptfs cryptsetup lvm2 zram node-exporter ${RRSYNC_DEPS} \
 	docker python3-docker-compose \
 	kernel-module-xt-conntrack \

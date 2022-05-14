@@ -3,6 +3,7 @@ Name=wlan0
 
 [Link]   
 MTUBytes=1492
+MACAddress=ac:83:f3:e6:24:14
 
 [Network]
 DHCP=ipv4

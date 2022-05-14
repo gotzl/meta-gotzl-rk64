@@ -1,17 +1,17 @@
-PACKAGECONFIG_append = " networkd"
+PACKAGECONFIG:append = " networkd"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI += " \
 	file://wired.network \
 	file://wireless.network \
 "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
 	${sysconfdir}/systemd/network/ \
 "
 
-do_install_append () {
+do_install:append () {
 	if ${@bb.utils.contains('PACKAGECONFIG','networkd','true','false',d)}; then
 		install -d ${D}${sysconfdir}/systemd/network
 		install -m 0644 ${WORKDIR}/wired.network ${D}${sysconfdir}/systemd/network/20-wired.network
