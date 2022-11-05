@@ -4,6 +4,10 @@ SRC_URI:append = " \
     file://jail.local \
 "
 
+do_compile () {
+    # overwrite do_compile from upper recipe, executing fail2ban-2to3 seems broken and obsolete
+}
+
 do_install:append() {
     sed -i 's,\(\?(\?:%(__vserver)s\\s+)\),\1?(auth.info\\s+),g' ${D}${sysconfdir}/fail2ban/filter.d/common.conf
     install -m 644 ${WORKDIR}/jail.local ${D}${sysconfdir}/fail2ban/

@@ -5,4 +5,5 @@ SRC_URI += " \
 	file://dmcrypt.cfg \
 	file://nfs.cfg \
 	file://wireguard.cfg \
+	file://nftables.cfg \
 "
