@@ -6,4 +6,5 @@ SRC_URI += " \
 	file://nfs.cfg \
 	file://wireguard.cfg \
 	file://nftables.cfg \
+        file://wifi_dongle.cfg \
 "
